@@ -12,21 +12,21 @@ const Home = () => {
         <div className='col-sm-4 mx-auto'>
 
           <div className='my-5 mx-4'>
-            <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-tab-pane" type="button" role="tab" aria-controls="login-tab-pane" aria-selected="true">Login</button>
+            <ul className="nav nav-tabs nav-fill" id="myTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button className="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-tab-pane" type="button" role="tab" aria-controls="login-tab-pane" aria-selected="true">Login</button>
               </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane" type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="false">Register</button>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane" type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="false">Register</button>
               </li>
             </ul>
-            <div class="tab-content py-4" id="myTabContent">
-              <div class="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+            <div className="tab-content py-4" id="myTabContent">
+              <div className="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
                 <h3 className='ms-4 mb-0'>Log into account.</h3>
                 <hr />
                 <Login />
               </div>
-              <div class="tab-pane fade" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+              <div className="tab-pane fade" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
                 <h3 className='ms-4 mb-0'>Create an account.</h3>
                 <hr />
                 <Register />
