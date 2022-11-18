@@ -1,8 +1,77 @@
 
-
 // color variables
-$primary-color: #0b1128;
+// $primary-color: #0b1128;
+$primary-color: #000225;
 $secondary-color: #ff5100;
 $heading-color: #232323;
 $text-color: #6f6f6f;
 $dark-bg-color: #323232;
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background-color: #00010e;
+}
+
+.bg-1{
+    background-color: $primary-color;
+}
+.bg-2{
+    background-color: $secondary-color;
+}
+hr{
+    border-color: #fff;
+}
+
+
+.nav-tabs{
+    .nav-link{
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+        color: #fff;
+    }
+    .nav-link.active{
+        background-color: $secondary-color;
+        color: #fff;
+    }
+    .nav-item:first-child{
+        .nav-link{
+            border-top-left-radius: 6px;
+        }
+    }
+    .nav-item:last-child{
+        .nav-link{
+            border-top-right-radius: 6px;
+        }
+    }
+}
+.tab-content{
+    h3{
+        color: #f7f7f7;
+    }
+}
+
+
+.navbar-bg{
+    background-color: $primary-color;
+    .navbar-brand{
+        font-weight: 400;
+        color: white;
+        font-size: 1.6rem;
+    }
+    .nav-link{
+        color: #fff;
+        font-weight: 500;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    .nav-link.active{
+        color: $secondary-color !important;
+    }
+}
