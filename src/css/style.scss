@@ -5,7 +5,9 @@ $primary-color: #000225;
 $secondary-color: #ff5100;
 $heading-color: #232323;
 $text-color: #6f6f6f;
-$dark-bg-color: #323232;
+$dark-bg-1: #323232;
+$dark-bg-2: #00010e;
+$light-color: #f7f7f7;
 
 *{
     padding: 0;
@@ -14,7 +16,7 @@ $dark-bg-color: #323232;
 }
 
 body{
-    background-color: #00010e;
+    background-color: $dark-bg-2;
 }
 
 .bg-1{
@@ -24,20 +26,64 @@ body{
     background-color: $secondary-color;
 }
 hr{
-    border-color: #fff;
+    border-color: $light-color;
 }
 
+.input-group{
+    border: 2px solid $text-color;
+    .input-group-text{
+        background-color: transparent;
+        color: $light-color;
+        border-color: transparent;
+        border-radius: 0;
+    }
+    .float-label-text{
+        position: relative;
+        flex: 1 1 auto;
+        label{
+            background-color: $dark-bg-2;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) translateX(.8rem);
+            padding: 0 5px;
+            color: $light-color;
+            cursor: text;
+            user-select: none;
+            transition: 300ms;
+        }
+        .form-control{
+            padding: 0.5rem;
+            background-color: transparent;
+            color: $light-color;
+            border-radius: 0;
+            box-shadow: none;
+            border-color: transparent;  
+        }
+        .form-control:focus ~ label,
+        .form-control:valid ~ label{
+            // background-color: $secondary-color;
+            color: $secondary-color;
+            opacity: 0.9;
+            top: 0;
+            transform: scale(0.8) translateY(-70%) translateX(-0.6rem);
+        }
+    }
+    &:has(.form-control:focus),
+    &:has(.form-control:valid){
+        border-color: $secondary-color;
+    }
+}
 
 .nav-tabs{
     .nav-link{
         background-color: transparent;
         border-radius: 0;
         border: 0;
-        color: #fff;
+        color: $light-color;
     }
     .nav-link.active{
         background-color: $secondary-color;
-        color: #fff;
+        color: $light-color;
     }
     .nav-item:first-child{
         .nav-link{
@@ -52,7 +98,7 @@ hr{
 }
 .tab-content{
     h3{
-        color: #f7f7f7;
+        color: $light-color;
     }
 }
 
@@ -61,11 +107,11 @@ hr{
     background-color: $primary-color;
     .navbar-brand{
         font-weight: 400;
-        color: white;
+        color: $light-color;
         font-size: 1.6rem;
     }
     .nav-link{
-        color: #fff;
+        color: $light-color;
         font-weight: 500;
         &:hover{
             color: $secondary-color;
