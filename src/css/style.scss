@@ -14,11 +14,9 @@ $light-color: #f7f7f7;
     margin: 0;
     font-family: Poppins, sans-serif;
 }
-
 body{
     background-color: $dark-bg-2;
 }
-
 .bg-1{
     background-color: $primary-color;
 }
@@ -51,7 +49,6 @@ hr{
         position: relative;
         flex: 1 1 auto;
         label{
-            // background-color: $dark-bg-2;
             position: absolute;
             top: 50%;
             transform: translateY(-50%) translateX(.8rem);
@@ -88,6 +85,38 @@ hr{
     }
 }
 
+.my-check-btn{
+    display: flex;
+    .my-check-group{
+        position: relative;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .my-check-input{
+            position: relative;
+            appearance: none;
+            width: 100%;
+            height: 40px;
+            border: 0;
+            outline: none;
+            background-color: rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: 150ms;
+
+            &:checked{
+                background-color: rgba($secondary-color, 0.4);
+            }
+        }
+        .my-check-label{
+            position: absolute;
+            cursor: pointer;
+            color: $light-color;
+        }
+    }
+}
+
 .form-bg-glass{
     background-color: rgba(255,255,255,0.1);
     border-radius: 6px;
@@ -121,7 +150,6 @@ hr{
         }
     }
 }
-
 
 .navbar-bg{
     background-color: $primary-color;

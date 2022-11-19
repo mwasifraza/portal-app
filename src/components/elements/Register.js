@@ -4,35 +4,47 @@ const Register = () => {
   return (
     <>
         <form>
-            <div className='px-4'>
-              <div className='form-floating mb-3'>
-                <input type="text" name="fullname" id='fullname' className='form-control' placeholder='Full Name' />
-                <label for="fullname">Full Name</label>
+            <div className='px-4 mt-4'>
+              <div className="input-group mb-4">
+                  <span className="input-group-text" id="basic-addon1"><i className="fa-regular fa-user"></i></span>
+                  <div className='float-label-text'>
+                      <input type="text" name="fullname" id='fullname' className="form-control" autoComplete='off' aria-label="fullname" aria-describedby="basic-addon1" required />
+                      <label for="fullname">Full Name</label>
+                  </div>
               </div>
-              <div className='form-floating mb-3'>
-                <input type="email" name="email" id='email' className='form-control' placeholder='Email' />
-                <label for="email">Email</label>
+              <div className="input-group mb-4">
+                  <span className="input-group-text" id="basic-addon1"><i className="fa-regular fa-envelope"></i></span>
+                  <div className='float-label-text'>
+                      <input type="email" name="email" id='email' className="form-control" autoComplete='off' aria-label="email" aria-describedby="basic-addon1" required />
+                      <label for="email">Email</label>
+                  </div>
               </div>
-              <div className='form-floating mb-3'>
-                <input type="text" name="username" id='username' className='form-control' placeholder='Username' />
-                <label for="username">Username</label>
+              <div className="input-group mb-4">
+                  <span className="input-group-text" id="basic-addon1"><i className="fa-regular fa-at"></i></span>
+                  <div className='float-label-text'>
+                      <input type="text" name="username" id='username' className="form-control" autoComplete='off' aria-label="Username" aria-describedby="basic-addon1" required />
+                      <label for="username">Username</label>
+                  </div>
               </div>
-              <div className='form-floating mb-3'>
-                <input type="password" name="password" id='password' className='form-control' placeholder='Password' />
-                <label for="password">Password</label>
+              <div className="input-group mb-4">
+                  <span className="input-group-text" id="basic-addon1"><i className="fa-solid fa-lock"></i></span>
+                  <div className='float-label-text'>
+                      <input type="password" name="password" id='password' className="form-control" autoComplete='off' aria-label="password" aria-describedby="basic-addon1" required />
+                      <label for="password">Password</label>
+                  </div>
               </div>
-              <div className='mb-3'>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="male" />
-                    <label class="form-check-label" for="male">Male</label>
+              <div className='mb-4 my-check-btn'>
+                <div class="my-check-group me-1">
+                    <input class="my-check-input" type="radio" name="gender" id="male" />
+                    <label class="my-check-label" for="male">Male</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="female" />
-                    <label class="form-check-label" for="female">Female</label>
+                <div class="my-check-group">
+                    <input class="my-check-input" type="radio" name="gender" id="female" />
+                    <label class="my-check-label" for="female">Female</label>
                 </div>
               </div>
               <div className='d-grid'>
-                <input type="submit" name="signup" value="Sign Up" id='signup' className='btn btn-warning' />
+                <input type="submit" name="signup" value="Sign Up" id='signup' className='btn my-btn-1 rounded-0' />
               </div>
             </div>
         </form>
