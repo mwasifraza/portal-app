@@ -35,16 +35,16 @@ const Register = () => {
               </div>
               <div className='mb-4 my-check-btn'>
                 <div class="my-check-group me-1">
-                    <input class="my-check-input" type="radio" name="gender" id="male" />
+                    <input class="my-check-input" type="radio" name="gender" id="male" value="male" />
                     <label class="my-check-label" for="male">Male</label>
                 </div>
                 <div class="my-check-group">
-                    <input class="my-check-input" type="radio" name="gender" id="female" />
+                    <input class="my-check-input" type="radio" name="gender" id="female" value="female" />
                     <label class="my-check-label" for="female">Female</label>
                 </div>
               </div>
               <div className='d-grid'>
-                <input type="submit" name="signup" value="Sign Up" id='signup' className='btn my-btn-1 rounded-0' />
+                <button className='btn my-btn-1 rounded-0' name="signup" id='signup'>Sign Up</button>
               </div>
             </div>
         </form>
