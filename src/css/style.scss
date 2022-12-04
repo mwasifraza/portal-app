@@ -1,13 +1,14 @@
 
 // color variables
-// $primary-color: #0b1128;
-$primary-color: #000225;
-$secondary-color: #ff5100;
+$primary-color: #abd699;
+$secondary-color: #75c9b7;
+$theme-yellow: #ffe26a;
+$theme-grey: #c7ddcc;
+$theme-navy: #16123f;
 $heading-color: #232323;
 $text-color: #6f6f6f;
-$dark-bg-1: #323232;
-$dark-bg-2: #00010e;
-$light-color: #f7f7f7;
+$dark-color: #151515;
+$light-color: #f9f9f9;
 
 *{
     padding: 0;
@@ -15,8 +16,44 @@ $light-color: #f7f7f7;
     font-family: Poppins, sans-serif;
 }
 body{
-    background-color: $dark-bg-2;
+    background-color: #fff9db;
 }
+
+.header{
+    position: relative;
+    min-height: 100vh;  
+    .header-child{
+        position: relative;
+        min-height: 94vh;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        background: #fffafa;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0, 55% 0, 35% 100%, 0% 100%);
+            background-color: $primary-color;
+            z-index: -1;
+        }
+
+        .navbar-brand.bold{
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #f9f9f9;
+        }
+    }  
+    .header-body{
+        flex-grow: 1;
+    }
+}
+
 .bg-1{
     background-color: $primary-color;
 }
@@ -27,13 +64,13 @@ hr{
     border-color: $light-color;
 }
 .my-btn-1{
-    background-color: $secondary-color;
-    border: 2px solid $secondary-color;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
     color: $light-color;
     &:hover{
         background-color: transparent;
-        border: 2px solid $secondary-color;
-        color: $light-color;
+        border: 2px solid $primary-color;
+        color: #16123f;
     }
 }
 
@@ -41,7 +78,7 @@ hr{
     border: 2px solid $text-color;
     .input-group-text{
         background-color: transparent;
-        color: $light-color;
+        color: #16123f;
         border-color: transparent;
         border-radius: 0;
     }
@@ -55,7 +92,7 @@ hr{
             padding: 0 5px;
             font-size: 1rem;
             font-weight: 400;
-            color: $light-color;
+            color: #16123f;
             cursor: text;
             user-select: none;
             transition: 300ms;
@@ -63,16 +100,16 @@ hr{
         .form-control{
             padding: 0.5rem;
             background-color: transparent;
-            color: $light-color;
+            color: #16123f;
             border-radius: 0;
             box-shadow: none;
             border-color: transparent;  
         }
         .form-control:focus ~ label,
         .form-control:valid ~ label{
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: $light-color;
-            opacity: 0.9;
+            opacity: 1;
             top: 0;
             font-size: 0.8rem;
             font-weight: 500;
@@ -81,7 +118,7 @@ hr{
     }
     &:has(.form-control:focus),
     &:has(.form-control:valid){
-        border-color: $secondary-color;
+        border-color: $primary-color;
     }
 }
 
@@ -101,24 +138,24 @@ hr{
             height: 40px;
             border: 0;
             outline: none;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(#abd699, 0.1);
             cursor: pointer;
             transition: 150ms;
 
             &:checked{
-                background-color: rgba($secondary-color, 0.4);
+                background-color: rgba($primary-color, 0.4);
             }
         }
         .my-check-label{
             position: absolute;
             cursor: pointer;
-            color: $light-color;
+            color: #16123f;
         }
     }
 }
 
 .form-bg-glass{
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(#abd699, 0.1);
     border-radius: 6px;
     .nav-tabs{
         border: 0;
@@ -126,11 +163,11 @@ hr{
             background-color: transparent;
             border-radius: 0;
             border: 0;
-            color: $light-color;
+            color: #16123f;
             outline: none;
         }
         .nav-link.active{
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: $light-color;
         }
         .nav-item:first-child{
@@ -146,26 +183,61 @@ hr{
     }
     .tab-content{
         h3{
-            color: $light-color;
+            color: #16123f;
+        }
+        hr{
+            background-color: #000;
         }
     }
 }
 
-.navbar-bg{
-    background-color: $primary-color;
-    .navbar-brand{
-        font-weight: 400;
-        color: $light-color;
-        font-size: 1.6rem;
-    }
-    .nav-link{
-        color: $light-color;
-        font-weight: 500;
-        &:hover{
-            color: $secondary-color;
+// .navbar-bg{
+//     background-color: $primary-color;
+//     .navbar-brand{
+//         font-weight: 400;
+//         color: $light-color;
+//         font-size: 1.6rem;
+//     }
+//     .nav-link{
+//         color: $light-color;
+//         font-weight: 500;
+//         &:hover{
+//             color: $secondary-color;
+//         }
+//     }
+//     .nav-link.active{
+//         color: $secondary-color !important;
+//     }
+// }
+
+// Footer CSS
+.footer{
+    .header-socials{
+        list-style-type: none;
+        li{
+            padding: 0.2rem 0.4rem;
+            margin: 0 0.2rem;
+
+            a{
+                font-size: 2rem;
+                color: #f9f9f9;
+                &:hover{
+                    color: #ffe26a;
+                }
+            }
         }
     }
-    .nav-link.active{
-        color: $secondary-color !important;
+    h6{
+        margin-bottom: 0;
+        font-size: 1.1em;
+        color: #404040;
+
+        a{
+            text-decoration: none;
+            color: #404040;
+            &:hover{
+                color: #abd699;
+            }
+        }
     }
 }
