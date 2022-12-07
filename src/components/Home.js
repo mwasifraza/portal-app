@@ -17,7 +17,16 @@ const Home = () => {
           </nav>
 
           <div className='row header-body'>
-            <div className='col-sm-6'></div>
+            <div className='col-sm-6 d-flex align-items-center'>
+              <div className='mx-4'>
+                <h1 className='main-title-heading'>
+                  <span>ISST's </span>
+                  <span>Learning </span>
+                  <span>Management </span> 
+                  <span>System </span>
+                </h1>
+              </div>
+            </div>
             <div className='offset-sm-1 col-sm-4 d-flex align-items-center'>
               <div className='mx-4 form-bg-glass w-100'>
                 <ul className="nav nav-tabs nav-fill" id="myTab" role="tablist">
