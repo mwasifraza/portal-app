@@ -30,7 +30,7 @@ body{
         z-index: 1;
         display: flex;
         flex-direction: column;
-        background: #fffafa;
+        background: $light-color;
         &:after{
             content: "";
             position: absolute;
@@ -46,7 +46,7 @@ body{
         .navbar-brand.bold{
             font-size: 1.6rem;
             font-weight: 600;
-            color: #f9f9f9;
+            color: $light-color;
         }
     }  
     .header-body{
@@ -54,11 +54,11 @@ body{
         .main-title-heading{
             font-weight: 900;
             text-transform: uppercase;
-            color: #f9f9f9;
+            color: $light-color;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $primary-color;
             // paint-order: stroke fill;
-            text-shadow: -6px -6px 0 #ffe26a;
+            text-shadow: -6px -6px 0 $theme-yellow;
             span:nth-child(1){
                 font-size: 3rem;
             }
@@ -72,7 +72,7 @@ body{
             }
             span:nth-child(4){
                 font-size: 8rem;
-                line-height: 7rem;
+                line-height: 6.5rem;
             }
         }
     }
@@ -94,7 +94,7 @@ hr{
     &:hover{
         background-color: transparent;
         border: 2px solid $primary-color;
-        color: #16123f;
+        color: $theme-navy;
     }
 }
 
@@ -102,7 +102,7 @@ hr{
     border: 2px solid $text-color;
     .input-group-text{
         background-color: transparent;
-        color: #16123f;
+        color: $theme-navy;
         border-color: transparent;
         border-radius: 0;
     }
@@ -116,7 +116,7 @@ hr{
             padding: 0 5px;
             font-size: 1rem;
             font-weight: 400;
-            color: #16123f;
+            color: $theme-navy;
             cursor: text;
             user-select: none;
             transition: 300ms;
@@ -124,7 +124,7 @@ hr{
         .form-control{
             padding: 0.5rem;
             background-color: transparent;
-            color: #16123f;
+            color: $theme-navy;
             border-radius: 0;
             box-shadow: none;
             border-color: transparent;  
@@ -162,7 +162,7 @@ hr{
             height: 40px;
             border: 0;
             outline: none;
-            background-color: rgba(#abd699, 0.1);
+            background-color: rgba($primary-color, 0.1);
             cursor: pointer;
             transition: 150ms;
 
@@ -173,13 +173,13 @@ hr{
         .my-check-label{
             position: absolute;
             cursor: pointer;
-            color: #16123f;
+            color: $theme-navy;
         }
     }
 }
 
 .form-bg-glass{
-    background-color: rgba(#abd699, 0.1);
+    background-color: rgba($primary-color, 0.1);
     border-radius: 6px;
     .nav-tabs{
         border: 0;
@@ -187,7 +187,7 @@ hr{
             background-color: transparent;
             border-radius: 0;
             border: 0;
-            color: #16123f;
+            color: $theme-navy;
             outline: none;
         }
         .nav-link.active{
@@ -207,10 +207,10 @@ hr{
     }
     .tab-content{
         h3{
-            color: #16123f;
+            color: $theme-navy;
         }
         hr{
-            background-color: #000;
+            background-color: $dark-color;
         }
     }
 }
@@ -244,9 +244,9 @@ hr{
 
             a{
                 font-size: 2rem;
-                color: #f9f9f9;
+                color: $light-color;
                 &:hover{
-                    color: #ffe26a;
+                    color: $theme-yellow;
                 }
             }
         }
@@ -254,13 +254,13 @@ hr{
     h6{
         margin-bottom: 0;
         font-size: 1.1em;
-        color: #404040;
+        color: $text-color;
 
         a{
             text-decoration: none;
-            color: #404040;
+            color: $text-color;
             &:hover{
-                color: #abd699;
+                color: $primary-color;
             }
         }
     }
